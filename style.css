@@ -129,8 +129,12 @@ body {
 .todo-text {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
     font-size: 18px;
     color: hsl(234, 39%, 85%);
+    padding: 0 50px 0 0;
+    gap: 20px;
 }
 
 .todo-item {
