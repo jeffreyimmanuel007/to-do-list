@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/854bc59689.css" crossorigin="anonymous">
+    
+
+</head>
+<body>
+    
+    <header>
+        <h2 class="logo">Logo</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <button id="login-popup" class="btnlogin-popup" onclick="login()">Login</button>
+        </nav>
+    </header>
+
+        <div class="hero">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                    <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                </div>
+                <!-- <div class="social-icons">
+                    <img src="wb.png">
+                    <img src="fb.png">
+                </div> -->
+                <div id="login" class="input-group" >
+                    <input type="text" class="input-field" placeholder="User Id" required >
+                    <input type="password" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <span class="alt">Don't have an account? <button type="submit" class="submit" onclick="register()">Register</button> </span>
+                    <button type="submit" class="submit-btn">LogIn</button>
+                    
+
+                </div>
+                <div id="register" class="input-group">
+                    <input type="text" class="input-field" placeholder="User Id" required>
+                    <input type="email" class="input-field" placeholder="Email Id" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+                    <span class="alt">Already have an account <button type="submit" class="submit" onclick="login()">Login</button> </span>
+                    <button type="submit" class="submit-btn">Register</button>
+
+
+                </div>
+            </div>
+           
+        </div>
+
+
+
+    <script src="login.js"></script>
+    <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
+    <script src="https://kit.fontawesome.com/854bc59689.js" crossorigin="anonymous"></script>
+    
+
+</body>
+</html>
