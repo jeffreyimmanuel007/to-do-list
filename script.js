@@ -94,3 +94,74 @@ function markCompleted(id){
 }
 
 getItems();
+
+
+// ...
+
+function clearCompletedItems() {
+    db.collection("todo-items")
+        .where("status", "==", "completed")
+        .get()
+        .then((snapshot) => {
+            snapshot.forEach((doc) => {
+                doc.ref.delete();
+            });
+        });
+}
+
+function showActiveItems() {
+    // Show only active items
+    db.collection("todo-items")
+        .where("status", "==", "active")
+        .onSnapshot((snapshot) => {
+            let items = [];
+            snapshot.docs.forEach((doc) => {
+                items.push({
+                    id: doc.id,
+                    ...doc.data()
+                });
+            });
+            generateItems(items);
+        });
+}
+
+function showCompletedItems() {
+    // Show only completed items
+    db.collection("todo-items")
+        .where("status", "==", "completed")
+        .onSnapshot((snapshot) => {
+            let items = [];
+            snapshot.docs.forEach((doc) => {
+                items.push({
+                    id: doc.id,
+                    ...doc.data()
+                });
+            });
+            generateItems(items);
+        });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    // ...
+
+    // Add event listener for clear completed button
+    const clearCompletedButton = document.getElementById("id");
+    clearCompletedButton.addEventListener("click", clearCompletedItems);
+
+    // Add event listener for showing active items
+    const activeItemsButton = document.querySelector(".items-statuses span:nth-child(2)");
+    activeItemsButton.addEventListener("click", showActiveItems);
+
+    // Add event listener for showing completed items
+    const completedItemsButton = document.querySelector(".items-statuses span:nth-child(3)");
+    completedItemsButton.addEventListener("click", showCompletedItems);
+
+    // add event listener for showing all items
+    const allItemsButton = document.querySelector(".items-statuses span:nth-child(1)");
+    allItemsButton.addEventListener("click", getItems);
+    
+
+});
+
+
+

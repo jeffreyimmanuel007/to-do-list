@@ -189,9 +189,10 @@ body {
     color: hsl(220, 98%, 61%);
 }
 
-.items-statuses .active  {
+/* .items-statuses .active  {
     color: hsl(220, 98%, 61%);
-}
+} */
+
 
 .todo-item:hover {
     transform: translateY(-2px);
@@ -200,5 +201,37 @@ body {
 }
 
 
+.items-statuses .active,
+.items-statuses .act,
+.items-statuses .com {
+  position: relative;
+}
 
+.items-statuses .active::after,
+.items-statuses .act::after,
+.items-statuses .com::after {
+  content: "";
+  display:none;
+  height: 2px;
+  background-color: hsl(220, 98%, 61%);
+  width: 0;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
+.items-statuses .active.active-selected::after,
+.items-statuses .act.act-selected::after,
+.items-statuses .com.com-selected::after {
+  width: 100%;
+}
+
+.items-statuses span.active-selected,
+.items-statuses span.act-selected,
+.items-statuses span.com-selected {
+  color: hsl(220, 98%, 61%);
+}
+
+  
