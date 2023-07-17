@@ -1,11 +1,12 @@
 var firebaseConfig = {
-  apiKey: "AIzaSyChZ2S5eTPQ7YV5CRXrJn1U_XGBKoz2Ujw",
-  authDomain: "to-do-968d0.firebaseapp.com",
-  projectId: "to-do-968d0",
-  storageBucket: "to-do-968d0.appspot.com",
-  messagingSenderId: "146494651477",
-  appId: "1:146494651477:web:32b41b0ae3bd899adb68dc",
-  measurementId: "G-4FK0W0PSBE"
+  apiKey: "AIzaSyAhlmqu-WzId4OVGtj4Tp9-xhY-uTnEB4o",
+  authDomain: "to-do-live-e8384.firebaseapp.com",
+  databaseURL: "https://to-do-live-e8384-default-rtdb.firebaseio.com",
+  projectId: "to-do-live-e8384",
+  storageBucket: "to-do-live-e8384.appspot.com",
+  messagingSenderId: "746459267480",
+  appId: "1:746459267480:web:2ad8898831e03605ab2bed",
+  measurementId: "G-FXN1HDZGRD"
   };
 
  
