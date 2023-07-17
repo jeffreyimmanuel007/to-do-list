@@ -14,4 +14,4 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 var db = firebase.firestore();
 // const auth = 
-console.log(firebase);;
+// console.log(firebase);
